@@ -17,7 +17,6 @@ public class UserImplDAO implements UserDAO {
     private int noOfRecords;
 
     User user;
-    String s = "";
 
     public synchronized boolean addUser(User user) {
 
@@ -182,7 +181,7 @@ public class UserImplDAO implements UserDAO {
 
         try {
             connection = ConnectDB.getConnection();
-            statement = connection.createStatement();
+            statement = connection.createStatement();            
             if (statement.execute("Select top " + countLines + " * from Users where id>=" + startInd)) {
                 resultSet = statement.getResultSet();
                 while (resultSet.next()) {
