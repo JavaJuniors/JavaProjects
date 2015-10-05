@@ -18,6 +18,7 @@ public class UserImplDAO implements UserDAO {
 
     User user;
 
+    String s="";
     public synchronized boolean addUser(User user) {
 
         boolean b = false;
