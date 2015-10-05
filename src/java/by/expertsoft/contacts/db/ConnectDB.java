@@ -15,5 +15,4 @@ public class ConnectDB {
         Connection connection = DriverManager.getConnection(db_connect_string);
         return connection;
     }   
-
 }
